@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.5"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "mongodb-memory-server": "^5.2.8"
+  }
+}
