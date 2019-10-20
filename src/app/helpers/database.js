@@ -1,10 +1,16 @@
 const mongoose = require('mongoose');
 
-const databaseConfig = require('../../config/database');
-
 const connect = async () => {
   if (mongoose.connection.readyState === 0) {
-    await mongoose.connect(databaseConfig.uri, databaseConfig.options);
+    await mongoose.connect(
+      process.env.NODE_ENV === 'test' ? global.__DB_URL__ : process.env.DB_URL,
+      {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useFindAndModify: false,
+        useUnifiedTopology: true,
+      }
+    );
   }
 };
 

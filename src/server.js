@@ -1,5 +1,3 @@
 const app = require('./app');
 
-const serverConfig = require('./config/server');
-
-app.listen(serverConfig.port);
+app.listen(process.env.NODE_PORT || 3000);
