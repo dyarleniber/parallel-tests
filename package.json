@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "node src/server.js",
-    "test": "jest"
+    "test": "NODE_ENV=test jest"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "jest": "^24.9.0",
-    "mongodb-memory-server": "^5.2.8"
+    "mongodb-memory-server": "^5.2.8",
+    "supertest": "^4.0.2"
   }
 }

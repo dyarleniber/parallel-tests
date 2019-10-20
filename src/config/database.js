@@ -1,5 +1,5 @@
 module.exports = {
-  uri: process.env.DB_URL,
+  uri: process.env.NODE_ENV === 'test' ? global.__DB_URL__ : process.env.DB_URL,
   options: {
   	useNewUrlParser: true,
     useCreateIndex: true,
